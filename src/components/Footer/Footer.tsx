@@ -25,11 +25,11 @@ export const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: "#https://x.com/Harkeshsingh03", label: "Twitter" },
-    { icon: Github, href: "#https://github.com/harkeshsingh0305", label: "GitHub" },
-    { icon: Linkedin, href: "#https://www.linkedin.com/in/harkesh-singh-585b41380?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:theharkesh0305@gmail.com", label: "Email" },
-  ];
+  { icon: Twitter, href: "https://x.com/Harkeshsingh03", label: "Twitter" },
+  { icon: Github, href: "https://github.com/harkeshsingh0305", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/harkesh-singh-585641380/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:theharkesh0305@gmail.com", label: "Email" },
+];
 
   return (
     <footer className="w-full relative z-10 pt-16 pb-28 md:pb-36 bg-card/60 backdrop-blur-2xl border-t border-black/5 dark:border-white/10 shadow-2xl rounded-t-[3rem] overflow-hidden">
@@ -104,13 +104,15 @@ export const Footer = () => {
               const Icon = social.icon;
               return (
                 <a
-                  key={i}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full glass-panel border border-black/5 dark:border-white/10 flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/40 hover:scale-110 transition-all shadow-sm"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
+  key={i}
+  href={social.href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={social.label}
+  className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer"
+>
+  <Icon className="w-4 h-4" />
+</a>
               );
             })}
           </div>
