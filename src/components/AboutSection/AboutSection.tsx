@@ -1,0 +1,56 @@
+import { motion } from "framer-motion";
+import { CheckCircle2, Code2, Globe2, GraduationCap, Layout, MapPin, Users } from "lucide-react";
+
+const stats = [
+  { icon: <GraduationCap className="w-6 h-6" />, label: "Graduation Time", value: "4 Years" },
+  { icon: <CheckCircle2 className="w-6 h-6" />, label: "Projects Completed", value: "Soon" },
+  { icon: <MapPin className="w-6 h-6" />, label: "Address", value: "Hathras, U.P." },
+  /* { icon: <Globe2 className="w-6 h-6" />, label: "", value: "12" }, */
+];
+
+export const AboutSection = () => {
+  return (
+    <section id="about" className="max-w-7xl mx-auto px-6 py-24">
+      <motion.div
+        className="flex flex-col md:flex-row gap-16 items-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div className="flex-1 space-y-8">
+          <div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+              About <span className="text-gradient-primary">ME</span>
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              I am a 2nd-year B.Tech student in Computer Science and Engineering (Data Science) with a strong foundation in C, C++, Python, Data Structures & Algorithms, and Machine Learning. I enjoy building practical projects, exploring data-driven solutions, and continuously improving my technical skills. I am passionate about learning new technologies and turning ideas into meaningful software solutions.
+
+            </p>
+          </div>
+        </div>
+
+        <div className="flex-1 grid grid-cols-2 gap-4 w-full">
+          {stats.map((stat, i) => (
+            <motion.div
+              key={i}
+              className="glass-panel p-6 rounded-2xl border border-foreground/10 hover:border-primary/50 transition-colors group relative overflow-hidden"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: i * 0.1, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="absolute -right-6 -top-6 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors" />
+              <div className="text-primary mb-4 p-3 bg-primary/10 w-max rounded-xl">
+                {stat.icon}
+              </div>
+              <h3 className="text-3xl font-bold text-foreground mb-1">{stat.value}</h3>
+              <p className="text-sm font-medium text-muted-foreground">{stat.label}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
+};
+
