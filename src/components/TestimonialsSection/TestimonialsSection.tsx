@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
+interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+  image: string;
+}
 
 const TestimonialsSection = () => {
-  const testimonials = [
+  const testimonials:Testimonial[] = [
     /* {
       name: "Sarah Jenkins",
       role: "CTO at InnovateX",

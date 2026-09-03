@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, Code2, Globe2, GraduationCap, Layout, MapPin, Users } from "lucide-react";
+import { CheckCircle2, GraduationCap, MapPin } from "lucide-react";
 
 const stats = [
   { icon: <GraduationCap className="w-6 h-6" />, label: "Graduation Time", value: "4 Years" },

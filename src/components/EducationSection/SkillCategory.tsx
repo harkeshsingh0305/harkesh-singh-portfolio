@@ -1,13 +1,9 @@
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Atom,
   Server,
   Code2,
-  Database,
-  Cloud,
   Crown,
   Brain,
-  Workflow,
   HeartHandshake,
   Lightbulb,
   Users,

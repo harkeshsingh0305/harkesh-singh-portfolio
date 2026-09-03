@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Code2, Palette, Cpu, Layers, Braces, BrainCircuit, GitFork, Binary } from "lucide-react";
+import {  Braces, BrainCircuit,  Binary } from "lucide-react";
 import { MagicCard } from "../lightswind/magic-card";
 
 const services = [
