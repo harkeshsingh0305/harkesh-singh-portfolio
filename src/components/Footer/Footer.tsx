@@ -27,7 +27,7 @@ export const Footer = () => {
   const socialLinks = [
   { icon: Twitter, href: "https://x.com/Harkeshsingh03", label: "Twitter" },
   { icon: Github, href: "https://github.com/harkeshsingh0305", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/harkesh-singh-585641380/", label: "LinkedIn" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/harkesh-singh-585b41380?utm_source=share_via&utm_content=profile&utm_medium=member_android", label: "LinkedIn" },
   { icon: Mail, href: "mailto:theharkesh0305@gmail.com", label: "Email" },
 ];
 
